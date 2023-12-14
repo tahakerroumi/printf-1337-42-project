@@ -30,8 +30,21 @@ int ft_printf(const char *str, ...)
 		else if (str[i] == '%' && str[i + 1] == 's')
 			counter += ft_putstr(va_arg(ptr,char *));
 		else if (str[i] == '%' && str[i + 1] == 'p')
-			counter += 
+			counter += ft_printp(va_arg(ptr,unsigned long));
+		else if (str[i] == '%' && str[i + 1] == 'd')
+			counter += ft_putnbr(va_arg(ptr,int));
+		else if (str[i] == '%' && str[i + 1] == 'i')
+			counter += ft_putnbr(va_arg(ptr,int));
+		else if (str[i] == '%' && str[i + 1] == 'u')
+			counter += ft_putnbr(va_arg(ptr,unsigned int));
+		else if (str[i] == '%' && str[i + 1] == 'x')
+			counter += ft_printhex(va_arg(ptr,unsigned long),1);
+		else if (str[i] += '%' && str[i + 1] == 'X')
+			counter += ft_printhex(va_arg(ptr,unsigned long),2);
 		else
 			counter += ft_putchar(str[i]);
+		i++;
 	}
+	va_end(ptr);
+	return (count);
 }

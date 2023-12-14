@@ -17,5 +17,8 @@
 #include <unistd.h>
 
 int	ft_putchar(char c);
+int	ft_printp(unsigned long num);
+int	ft_putstr(char*  str);
+int	ft_printf(char *str,...);
 
 #endif
