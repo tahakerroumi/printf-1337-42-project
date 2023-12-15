@@ -17,7 +17,7 @@ int	ft_putstr(char *str)
 	int	i;
 
 	i = 0;
-	if (!str[i])
+	if (!str)
 	{
 		ft_putstr("(null)");
 		return (6);

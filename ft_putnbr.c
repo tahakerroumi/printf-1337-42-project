@@ -19,8 +19,8 @@ int	ft_putnbr(int num)
 	count = 0;
 	if (num == -2147483648)
 	{
-		count += ft_putstr("-21");
-		count += ft_putnbr(47483648);
+		count += ft_putstr("-2147483648");
+		return (count);
 	}
 	if (num < 0)
 	{
@@ -29,7 +29,6 @@ int	ft_putnbr(int num)
 	}
 	if (num >= 10)
 		count += ft_putnbr(num / 10);
-	if (num >= 0 && num <= 9)
-		count += ft_putchar(num % 10 + 48);
-	return (count);
+	count += ft_putchar(num % 10 + 48);
+	return (4);
 }

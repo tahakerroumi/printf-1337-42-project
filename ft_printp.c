@@ -12,13 +12,13 @@
 
 #include "libftprintf.h"
 
-int	ft_printp(unsigned long num)
+int	ft_printp(unsigned long int num)
 {
 	unsigned long	count;
 	char			*str;
 
 	count = 0;
-	if (num == 0)
+	if (!num)
 		return (ft_putstr("(nil)"));
 	str = "0123456789abcdef";
 	if (num >= 16)

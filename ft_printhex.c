@@ -12,7 +12,7 @@
 
 #include"libftprintf.h"
 
-int	ft_printhex(unsigned long num, int a)
+int	ft_printhex(unsigned int num, int a)
 {
 	int		counter;
 	char	*str;
