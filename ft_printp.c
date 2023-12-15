@@ -12,7 +12,7 @@
 
 #include "ft_printf.h"
 
-int	ft_printp(unsigned long long num)
+int	ft_printp(unsigned long int num)
 {
 	unsigned long	count;
 	char			*str;
