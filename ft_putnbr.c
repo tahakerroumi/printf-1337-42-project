@@ -19,13 +19,13 @@ int	ft_putnbr(int num)
 
 	count = 0;
 	n = num;
-	if (num < 0)
+	if (n < 0)
 	{
 		count += ft_putchar('-');
-		num *= -1;
+		n *= -1;
 	}
-	if (num >= 10)
-		count += ft_putnbr(num / 10);
+	if (n >= 10)
+		count += ft_putnbr(n / 10);
 	count += ft_putchar(n % 10 + 48);
 	return (count);
 }

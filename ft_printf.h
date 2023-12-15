@@ -18,7 +18,7 @@
 # include <stdio.h>
 
 int	ft_putchar(char c);
-int	ft_printp(unsigned long int num);
+int	ft_printp(unsigned long num);
 int	ft_putstr(char *str);
 int	ft_printf(const char *str, ...);
 int	ft_printhex(unsigned int num, int a);
