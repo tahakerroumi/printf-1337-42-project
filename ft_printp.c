@@ -14,15 +14,14 @@
 
 int	ft_printp(unsigned long num)
 {
-	unsigned long count;
-	char	*str;
+	unsigned long	count;
+	char			*str;
 
 	count = 0;
 	if (num == 0)
-		return(ft_putstr("(nil)"));
+		return (ft_putstr("(nil)"));
 	str = "0123456789abcdef";
-
-	if(num >= 16)
+	if (num >= 16)
 	{
 		count += ft_printp(num / 16);
 		count += ft_putchar(str[num % 16]);

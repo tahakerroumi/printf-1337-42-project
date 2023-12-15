@@ -1,8 +1,21 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_printhex.c                                      :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: tkerroum <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/12/15 01:47:03 by tkerroum          #+#    #+#             */
+/*   Updated: 2023/12/15 01:47:11 by tkerroum         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include"libftprintf.h"
+
 int	ft_printhex(unsigned long num, int a)
 {
-	int counter;
-	char *str;
+	int		counter;
+	char	*str;
 
 	counter = 0;
 	if (a == 1)
