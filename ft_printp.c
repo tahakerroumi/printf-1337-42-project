@@ -12,7 +12,7 @@
 
 #include "ft_printf.h"
 
-int	ft_printp(unsigned long int num)
+int	ft_printp(unsigned long long num)
 {
 	unsigned long	count;
 	char			*str;
@@ -29,7 +29,7 @@ int	ft_printp(unsigned long int num)
 	if (num < 16)
 	{
 		count += ft_putstr("0x");
-		count += ft_putchar(str[num % 16]);
+		count += ft_putchar(str[num]);
 	}
 	return (count);
 }

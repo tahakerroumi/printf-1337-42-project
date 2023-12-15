@@ -28,7 +28,7 @@ int	ft_printhex(unsigned int num, int a)
 		counter += ft_putchar(str[num % 16]);
 	}
 	if (num < 16)
-		counter += ft_putchar(str[num % 16]);
+		counter += ft_putchar(str[num]);
 	return (counter);
 }
 // int main ()
