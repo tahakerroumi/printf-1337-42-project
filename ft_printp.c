@@ -11,13 +11,15 @@
 /* ************************************************************************** */
 
 #include "libftprintf.h"
-#include<stdio.h>
+
 int	ft_printp(unsigned long num)
 {
 	unsigned long count;
 	char	*str;
 
 	count = 0;
+	if (num == 0)
+		return(ft_putstr("(nil)"));
 	str = "0123456789abcdef";
 
 	if(num >= 16)
@@ -32,11 +34,11 @@ int	ft_printp(unsigned long num)
 	}
 	return (count);
 }
-int main ()
-{
-	int* p;
-	int a = 14;
-	p = &a;
-	printf("%p\n",p);
-	ft_printp((unsigned long )p);
-}
+// int main ()
+// {
+// 	char* p = NULL;
+// 	// int a = 14;
+// 	// p = &a;
+// 	printf("%p\n",&p);
+// 	ft_printp(&p);
+// }
