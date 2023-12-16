@@ -35,6 +35,11 @@ static	int	percent(char str, va_list ptr)
 		counter += ft_printhex(va_arg(ptr, unsigned int), 1);
 	else if (str == 'X')
 		counter += ft_printhex(va_arg(ptr, unsigned int), 2);
+	else
+	{
+		counter += ft_putchar('%');
+		counter += ft_putchar(str);
+	}
 	return (counter);
 }
 

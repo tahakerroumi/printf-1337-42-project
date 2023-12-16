@@ -14,15 +14,11 @@
 
 int	ft_printu(unsigned int num)
 {
-	int	counter;
+	unsigned int	counter;
 
 	counter = 0;
 	if (num >= 10)
-	{
-		counter += ft_putnbr(num / 10);
-		counter += ft_putnbr(num % 10);
-	}
-	else
-		counter += ft_putchar(num % 10 + 48);
+		counter += ft_printu(num / 10);
+	counter += ft_putchar(num % 10 + 48);
 	return (counter);
 }
