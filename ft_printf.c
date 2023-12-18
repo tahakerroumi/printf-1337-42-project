@@ -25,9 +25,7 @@ static	int	percent(char str, va_list ptr)
 		counter += ft_putstr(va_arg(ptr, char *));
 	else if (str == 'p')
 		counter += ft_printp(va_arg(ptr, unsigned long));
-	else if (str == 'd')
-		counter += ft_putnbr(va_arg(ptr, int));
-	else if (str == 'i')
+	else if (str == 'd' || str == 'i')
 		counter += ft_putnbr(va_arg(ptr, int));
 	else if (str == 'u')
 		counter += ft_printu(va_arg(ptr, unsigned int));
@@ -47,7 +45,7 @@ int	ft_printf(const char *str, ...)
 {
 	va_list	ptr;
 	int		counter;
-	int		i;
+	size_t	i;
 
 	i = 0;
 	counter = 0;

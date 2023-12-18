@@ -21,12 +21,15 @@ OBJ = $(SRC:.c=.o)
 all: $(NAME)
  
 $(NAME): $(OBJ)
-		ar rc $(NAME) $(OBJ)
+
+%.o: %.c
+		$(CC) $(CFLAGS) -c $< -o $@
+		ar rc $(NAME) $@
 
 clean:
-		$(RM) $(OBJ)
+		rm -rf $(OBJ)
 
 fclean: clean
-		$(RM) $(NAME)
+		rm -rf $(NAME)
 
 re: fclean all
