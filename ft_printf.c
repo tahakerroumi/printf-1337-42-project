@@ -49,7 +49,7 @@ int	ft_printf(const char *str, ...)
 
 	i = 0;
 	counter = 0;
-	if (!str[i])
+	if (!str)
 		return (-1);
 	va_start (ptr, str);
 	while (str[i])
